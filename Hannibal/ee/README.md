@@ -114,7 +114,7 @@ In short, the MIPS ISA is an industry standard RISC ISA that's found in applicat
 
 (Here's a shot of the processor [block diagram](../diagram1.gif) [*(original link)*](http://www.arstechnica.com/reviews/1q00/playstation2/diagram1.html).) The core can issue two 64-bit integer ops, or one integer op and one 128-bit Load/Store per cycle. For the obsessed, below is a handy chart that gives you a breakdown of all the types of instructions that can be issued concurrently:
 
-            | ALU | MAC0 | MMI | Branch | COP1 oper. | COP2 oper.
+--          | ALU | MAC0 | MMI | Branch | COP1 oper. | COP2 oper.
 ----------- | --- | ---- | --- | ------ | ---------- | ----------
 ALU         | X   | X    | X   | X      | X          | X
 MAC1        | X   | X    | X   | X      | X          | X
@@ -183,12 +183,14 @@ Here are the computational units available to VU0 (and VU1):
 
 The first 5 units here, the 4 FMACs and the 1 FDIV, are sort of the heart of both VU0 and VU1 (which are themselves the heart of the Emotion Engine, which is itself the heart of the PS2). So this is where the magic happens. Each of the FMACs can do the following instructions:
 
+--                                 | --
 ---------------------------------- | -------
 Floating-Point Multiply-Accumulate | 1 cycle
 Min/Max                            | 1 cycle
 
 The FDIV unit does the following instructions:
 
+--                    | --
 --------------------- | ---------
 Floating-point Divide | 7 cycles
 Square Root           | 7 cycles
@@ -274,7 +276,7 @@ Feature                  | Description
 *SPRAM*                  | 16K
 **Data Bus**             | 128-bits
 **FPU**                  | 1 FMAC + 1 FDIV
-**VPU**                  |
+**VPU**                  | --
 *VPU0*                   | 4 FMACS + 1 FDIV
 *VPU1*                   | 4 FMACS + 1 FDIV
 *EFU (attached to VPU1)* | 1 FMAC + 1 FDIV
@@ -289,6 +291,7 @@ Although I've stated repeatedly that the PS2's number one application is 3D gami
 
 Toshiba is also planning to leverage the Emotion Engine in other markets. I don't have any details, but I'd imagine that before too long we can expect to see a whole range of devices based on this chip. As far as its options in the embedded market, it's not exactly the lowest power device available. Here are some specs that should give you an idea how it stacks up, process wise, to other CPUs out there.
 
+--              | --
 --------------- | --------------------------
 **Clock**       | 250 MHz
 **VDD**         | 1.8v

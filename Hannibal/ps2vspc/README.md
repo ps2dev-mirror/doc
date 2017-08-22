@@ -64,7 +64,7 @@ Finally, in the display stage, the next frame is being painted onto the screen. 
 
 You should be able to tell from the above, very general description just how closely the 3D rendering process is fitted to the PC's architecture. To further nuance the description, let's look at the overall division of labor for the rendering process on a standard PC. First up, here's a table that gives you a very general idea of how much cache is available to the rendering pipeline.
 
-Pentium III, 32MB TNT2 Ultra |
+Pentium III, 32MB TNT2 Ultra | --
 ---------------------------- | --------------------
 L1 cache (instruction, data) | 16K 4-way, 16K 4-way
 L2 cache                     | 256K unified
@@ -89,7 +89,7 @@ In place of the PC's north bridge, the PS2 has a 10-channel **Direct Memory Acce
 
 Speaking of the PS2's internal caches, let's look at their sizes, and how they stack up to a PIII's caches, especially with respect to the first few stages of the rendering pipeline.
 
-Playstation2                   |
+Playstation2                   | --
 ------------------------------ | ------------------------------------
 L1 cache (instruction,data)    | 16K 2-way instruction, 8K 2-way data
 SPRAM                          | 16K
